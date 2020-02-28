@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableColumn?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test1.UsersController">
+   <children>
+      <JFXTreeTableView fx:id="table" layoutX="164.0" layoutY="67.0" prefHeight="400.0" prefWidth="486.0" stylesheets="@New%20Text%20Document.css">
+         <columns>
+            <JFXTreeTableColumn fx:id="userName" prefWidth="150.0" text="User Name" />
+            <JFXTreeTableColumn fx:id="password" prefWidth="150.0" text="Password" />
+         </columns></JFXTreeTableView>
+      <JFXTextField fx:id="newusername" layoutX="481.0" layoutY="493.0" promptText="User Name" />
+      <JFXButton fx:id="newuserbtn" buttonType="RAISED" layoutX="291.0" layoutY="524.0" onAction="#addNewUser" style="-fx-background-color: #009688;" text="Add New User" />
+      <JFXPasswordField fx:id="newpass" layoutX="481.0" layoutY="555.0" promptText="Password" />
+      <JFXTextField fx:id="usersearch" layoutX="164.0" layoutY="28.0" onInputMethodTextChanged="#search" promptText="Search" />
+   </children>
+</AnchorPane>

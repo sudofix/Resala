@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackpane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test1.loginController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="600.0" style="-fx-background-color: #7A7474;">
+         <children>
+            <JFXTextField fx:id="user_nameText" labelFloat="true" layoutX="150.0" layoutY="287.0" prefHeight="30.0" prefWidth="300.0" promptText="Enter User Name" style="-fx-text-inner-color: white; -fx-prompt-text-fill: white;" unFocusColor="#397229" />
+            <JFXPasswordField fx:id="passwordText" labelFloat="true" layoutX="150.0" layoutY="371.0" prefHeight="30.0" prefWidth="300.0" promptText="Enter Password" style="-fx-prompt-text-fill: white; -fx-text-inner-fill: white;" unFocusColor="#387229" />
+            <JFXButton fx:id="loginBtn" buttonType="RAISED" layoutX="150.0" layoutY="515.0" onAction="#loginButtonClicked" prefHeight="30.0" prefWidth="300.0" ripplerFill="#fc0101" style="-fx-background-color: #004D40;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="191.0" fitWidth="248.0" layoutX="205.0" layoutY="28.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@306473.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

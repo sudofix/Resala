@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<JFXTabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test1.QueryController">
+   <tabs>
+      <Tab text="Families">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXTreeTableView fx:id="familytable" layoutX="14.0" layoutY="58.0" prefHeight="490.0" prefWidth="770.0">
+                     <columns>
+                        <TreeTableColumn fx:id="idcolumn" prefWidth="150.0" text="ID" />
+                        <TreeTableColumn fx:id="areacodecolumn" prefWidth="150.0" text="Area Code" />
+                        <TreeTableColumn fx:id="husbandnamecolumn" prefWidth="150.0" text="HusbandName" />
+                        <TreeTableColumn fx:id="phonecolumn" prefWidth="150.0" text="Phone" />
+                        <TreeTableColumn fx:id="mobilecolumn" prefWidth="150.0" text="Mobile" />
+                        <TreeTableColumn fx:id="descriptioncolumn" prefWidth="150.0" text="Description" />
+                        <TreeTableColumn fx:id="namecolumn" prefWidth="150.0" text="Name" />
+                        <TreeTableColumn fx:id="researchercolumn" prefWidth="150.0" text="Researcher" />
+                        <TreeTableColumn fx:id="ratecolumn" prefWidth="150.0" text="Rate" />
+                        <TreeTableColumn fx:id="datecolumn" prefWidth="150.0" text="Date" />
+                     </columns>
+                  </JFXTreeTableView>
+                  <TextField fx:id="familyinput" layoutX="14.0" layoutY="14.0" />
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Members">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXTreeTableView fx:id="membertable" layoutX="15.0" layoutY="59.0" prefHeight="490.0" prefWidth="770.0">
+                     <columns>
+                        <TreeTableColumn fx:id="membername" prefWidth="150.0" text="Name" />
+                        <TreeTableColumn fx:id="memberage" prefWidth="150.0" text="Age" />
+                        <TreeTableColumn fx:id="membermarried" prefWidth="150.0" text="Married" />
+                        <TreeTableColumn fx:id="membereducation" prefWidth="150.0" text="Education" />
+                        <TreeTableColumn fx:id="memberjob" prefWidth="150.0" text="Job" />
+                        <TreeTableColumn fx:id="memberid" prefWidth="150.0" text="National ID" />
+                        <TreeTableColumn fx:id="memberfamilyid" prefWidth="150.0" text="Family ID" />
+                     </columns></JFXTreeTableView>
+                  <TextField fx:id="membersearch" layoutX="15.0" layoutY="22.0" />
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Accommodatons">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXTreeTableView fx:id="accommodationtable" layoutX="15.0" layoutY="59.0" prefHeight="490.0" prefWidth="770.0">
+                     <columns>
+                        <TreeTableColumn fx:id="acctype" prefWidth="150.0" text="Type" />
+                        <TreeTableColumn fx:id="accrent" prefWidth="150.0" text="Rent" />
+                        <TreeTableColumn fx:id="accarea" prefWidth="150.0" text="Area" />
+                        <TreeTableColumn fx:id="accfloors" prefWidth="150.0" text="Floors" />
+                        <TreeTableColumn fx:id="accrooms" prefWidth="150.0" text="Rooms" />
+                        <TreeTableColumn fx:id="accroof" prefWidth="150.0" text="Roof" />
+                        <TreeTableColumn fx:id="accbathroom" prefWidth="150.0" text="Bathroom" />
+                        <TreeTableColumn fx:id="accbuild" prefWidth="150.0" text="Build" />
+                        <TreeTableColumn fx:id="accrate" prefWidth="150.0" text="Rate" />
+                        <TreeTableColumn fx:id="accwater" prefWidth="150.0" text="Water ID" />
+                        <TreeTableColumn fx:id="accelectricity" prefWidth="150.0" text="Electricity ID" />
+                        <TreeTableColumn fx:id="accopinion" prefWidth="150.0" text="Opinion" />
+                        <TreeTableColumn fx:id="accfamilyid" prefWidth="150.0" text="Family ID" />
+                     </columns></JFXTreeTableView>
+                  <TextField fx:id="accsearch" layoutX="15.0" layoutY="21.0" />
+               </children></AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Income">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXTreeTableView fx:id="incometable" layoutX="15.0" layoutY="59.0" prefHeight="490.0" prefWidth="770.0">
+                     <columns>
+                        <TreeTableColumn fx:id="incomevalue" prefWidth="150.0" text="Value" />
+                        <TreeTableColumn fx:id="incomedetails" prefWidth="150.0" text="Details" />
+                        <TreeTableColumn fx:id="incomefamilyid" prefWidth="150.0" text="Family ID" />
+                     </columns>
+                  </JFXTreeTableView>
+                  <TextField fx:id="incomesearch" layoutX="14.0" layoutY="14.0" />
+               </children></AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Outcome">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXTreeTableView fx:id="outcometable" layoutX="15.0" layoutY="59.0" prefHeight="490.0" prefWidth="770.0">
+                     <columns>
+                        <TreeTableColumn fx:id="outcomevalue" prefWidth="150.0" text="Value" />
+                        <TreeTableColumn fx:id="outcomedetails" prefWidth="150.0" text="Details" />
+                        <TreeTableColumn fx:id="outcomefamilyid" prefWidth="150.0" text="Family ID" />
+                     </columns>
+                  </JFXTreeTableView>
+                  <TextField fx:id="outcomesearch" layoutX="14.0" layoutY="14.0" />
+               </children></AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Needs">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXTreeTableView fx:id="needtable" layoutX="15.0" layoutY="59.0" prefHeight="490.0" prefWidth="770.0">
+                     <columns>
+                        <TreeTableColumn fx:id="needneed" prefWidth="150.0" text="Need" />
+                        <TreeTableColumn fx:id="needavailability" prefWidth="150.0" text="Availability" />
+                        <TreeTableColumn fx:id="needfamilyid" minWidth="0.0" prefWidth="150.0" text="Family ID" />
+                     </columns>
+                  </JFXTreeTableView>
+                  <TextField fx:id="needsearch" layoutX="15.0" layoutY="22.0" />
+               </children></AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Support">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXTreeTableView fx:id="supporttable" layoutX="15.0" layoutY="59.0" prefHeight="490.0" prefWidth="770.0">
+                     <columns>
+                        <TreeTableColumn fx:id="supporttype" prefWidth="150.0" text="Type" />
+                        <TreeTableColumn fx:id="supportvalue" prefWidth="150.0" text="Value" />
+                        <TreeTableColumn fx:id="supportsource" prefWidth="150.0" text="Source" />
+                        <TreeTableColumn fx:id="supportregularity" prefWidth="150.0" text="Regularity" />
+                        <TreeTableColumn fx:id="supportnotes" prefWidth="150.0" text="Notes" />
+                        <TreeTableColumn fx:id="supportfamilyid" prefWidth="150.0" text="Family ID" />
+                     </columns>
+                  </JFXTreeTableView>
+                  <TextField fx:id="supportsearch" layoutX="15.0" layoutY="14.0" />
+               </children></AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Appliance">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXTreeTableView fx:id="appliancetable" layoutX="15.0" layoutY="59.0" prefHeight="490.0" prefWidth="770.0">
+                     <columns>
+                        <TreeTableColumn fx:id="appliancetype" prefWidth="150.0" text="Type" />
+                        <TreeTableColumn fx:id="appliancestatus" prefWidth="150.0" text="Status" />
+                        <TreeTableColumn fx:id="appliancefamilyid" prefWidth="150.0" text="Family ID" />
+                     </columns>
+                  </JFXTreeTableView>
+                  <TextField fx:id="appliancesearch" layoutX="15.0" layoutY="21.0" />
+               </children></AnchorPane>
+         </content>
+      </Tab>
+   </tabs>
+</JFXTabPane>

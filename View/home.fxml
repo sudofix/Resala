@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0"  xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test1.HomeController">
+   <children>
+      <JFXProgressBar layoutX="260.0" layoutY="265.0" prefHeight="5.0" prefWidth="281.0" />
+      <Label layoutX="370.0" layoutY="149.0" text="Welcome" />
+      <JFXTextField fx:id="repid" labelFloat="true" layoutX="292.0" layoutY="409.0" prefHeight="31.0" prefWidth="216.0" promptText="ID" />
+      <JFXButton fx:id="repbutton" buttonType="RAISED" layoutX="292.0" layoutY="506.0" onAction="#generatereport" prefHeight="31.0" prefWidth="216.0" ripplerFill="#a1c4ee" style="-fx-background-color: violet;" text="Print" />
+      <Label layoutX="292.0" layoutY="328.0" text="Enter Family ID To Print a Report" />
+   </children>
+</AnchorPane>

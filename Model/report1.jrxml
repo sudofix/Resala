@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" pageWidth="5040" pageHeight="720" orientation="Landscape" columnWidth="5000" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="53788ad4-8344-45cd-b340-d1d662426480">
+	<property name="ireport.zoom" value="1.4641000000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="ID" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[2006]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     FAMILY."AREA_CODE" AS FAMILY_AREA_CODE,
+     FAMILY."RATE" AS FAMILY_RATE,
+     FAMILY."ID" AS FAMILY_ID,
+     FAMILY."NAME" AS FAMILY_NAME,
+     FAMILY."HUSBAND_NAME" AS FAMILY_HUSBAND_NAME,
+     FAMILY."PHONE" AS FAMILY_PHONE,
+     FAMILY."MOBILE" AS FAMILY_MOBILE,
+     FAMILY."RESEARCH_DATE" AS FAMILY_RESEARCH_DATE,
+     FAMILY."RESEARCHER" AS FAMILY_RESEARCHER,
+     FAMILY."CASE_DESCRIPTION" AS FAMILY_CASE_DESCRIPTION,
+     ACCOMMODATION."TYPE" AS ACCOMMODATION_TYPE,
+     ACCOMMODATION."RENT" AS ACCOMMODATION_RENT,
+     ACCOMMODATION."AREA" AS ACCOMMODATION_AREA,
+     ACCOMMODATION."FLOORS" AS ACCOMMODATION_FLOORS,
+     ACCOMMODATION."ROOMS" AS ACCOMMODATION_ROOMS,
+     ACCOMMODATION."ROOF" AS ACCOMMODATION_ROOF,
+     ACCOMMODATION."BATHROOM" AS ACCOMMODATION_BATHROOM,
+     ACCOMMODATION."BUILD" AS ACCOMMODATION_BUILD,
+     ACCOMMODATION."RATE" AS ACCOMMODATION_RATE,
+     ACCOMMODATION."WATER_ID" AS ACCOMMODATION_WATER_ID,
+     ACCOMMODATION."ELECTRICITY_ID" AS ACCOMMODATION_ELECTRICITY_ID,
+     ACCOMMODATION."OPINION" AS ACCOMMODATION_OPINION,
+     ACCOMMODATION."FAMILY_ID" AS ACCOMMODATION_FAMILY_ID,
+     FAMILY_MEMBERS."NAME" AS FAMILY_MEMBERS_NAME,
+     FAMILY_MEMBERS."AGE" AS FAMILY_MEMBERS_AGE,
+     FAMILY_MEMBERS."MARRIED" AS FAMILY_MEMBERS_MARRIED,
+     FAMILY_MEMBERS."EDUCATION" AS FAMILY_MEMBERS_EDUCATION,
+     FAMILY_MEMBERS."JOB" AS FAMILY_MEMBERS_JOB,
+     FAMILY_MEMBERS."NATIONAL_ID" AS FAMILY_MEMBERS_NATIONAL_ID,
+     FAMILY_MEMBERS."FAMILY_ID" AS FAMILY_MEMBERS_FAMILY_ID
+FROM
+     "RESALA"."FAMILY" FAMILY INNER JOIN "RESALA"."ACCOMMODATION" ACCOMMODATION ON FAMILY."ID" = ACCOMMODATION."FAMILY_ID"
+     INNER JOIN "RESALA"."FAMILY_MEMBERS" FAMILY_MEMBERS ON FAMILY."ID" = FAMILY_MEMBERS."FAMILY_ID"
+WHERE
+     FAMILY."ID" = $P{ID}]]>
+	</queryString>
+	<field name="FAMILY_AREA_CODE" class="java.math.BigDecimal"/>
+	<field name="FAMILY_RATE" class="java.math.BigDecimal"/>
+	<field name="FAMILY_ID" class="java.math.BigDecimal"/>
+	<field name="FAMILY_NAME" class="java.lang.String"/>
+	<field name="FAMILY_HUSBAND_NAME" class="java.lang.String"/>
+	<field name="FAMILY_PHONE" class="java.math.BigDecimal"/>
+	<field name="FAMILY_MOBILE" class="java.math.BigDecimal"/>
+	<field name="FAMILY_RESEARCH_DATE" class="java.sql.Timestamp"/>
+	<field name="FAMILY_RESEARCHER" class="java.lang.String"/>
+	<field name="FAMILY_CASE_DESCRIPTION" class="java.lang.String"/>
+	<field name="ACCOMMODATION_TYPE" class="java.lang.String"/>
+	<field name="ACCOMMODATION_RENT" class="java.lang.String"/>
+	<field name="ACCOMMODATION_AREA" class="java.lang.String"/>
+	<field name="ACCOMMODATION_FLOORS" class="java.math.BigDecimal"/>
+	<field name="ACCOMMODATION_ROOMS" class="java.math.BigDecimal"/>
+	<field name="ACCOMMODATION_ROOF" class="java.lang.String"/>
+	<field name="ACCOMMODATION_BATHROOM" class="java.lang.String"/>
+	<field name="ACCOMMODATION_BUILD" class="java.lang.String"/>
+	<field name="ACCOMMODATION_RATE" class="java.lang.String"/>
+	<field name="ACCOMMODATION_WATER_ID" class="java.math.BigDecimal"/>
+	<field name="ACCOMMODATION_ELECTRICITY_ID" class="java.math.BigDecimal"/>
+	<field name="ACCOMMODATION_OPINION" class="java.lang.String"/>
+	<field name="ACCOMMODATION_FAMILY_ID" class="java.math.BigDecimal"/>
+	<field name="FAMILY_MEMBERS_NAME" class="java.lang.String"/>
+	<field name="FAMILY_MEMBERS_AGE" class="java.math.BigDecimal"/>
+	<field name="FAMILY_MEMBERS_MARRIED" class="java.math.BigDecimal"/>
+	<field name="FAMILY_MEMBERS_EDUCATION" class="java.lang.String"/>
+	<field name="FAMILY_MEMBERS_JOB" class="java.lang.String"/>
+	<field name="FAMILY_MEMBERS_NATIONAL_ID" class="java.math.BigDecimal"/>
+	<field name="FAMILY_MEMBERS_FAMILY_ID" class="java.math.BigDecimal"/>
+	<group name="FAMILY_ID">
+		<groupExpression><![CDATA[$F{FAMILY_ID}]]></groupExpression>
+		<groupHeader>
+			<band height="37">
+				<frame>
+					<reportElement mode="Opaque" x="-21" y="7" width="843" height="24" forecolor="#B89F7D" backcolor="#F2EBDF" uuid="60038418-1d08-483b-bb09-5e620eec715f"/>
+					<rectangle>
+						<reportElement mode="Opaque" x="21" y="0" width="36" height="24" backcolor="#736343" uuid="a261f84e-a026-4706-a92f-9abe76a62ca6"/>
+						<graphicElement>
+							<pen lineWidth="0.0"/>
+						</graphicElement>
+					</rectangle>
+					<textField>
+						<reportElement style="SubTitle" x="68" y="0" width="755" height="24" forecolor="#736343" uuid="4d834d43-61e0-4fac-bf58-51cb2b1a4780"/>
+						<textElement>
+							<font isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{FAMILY_ID}]]></textFieldExpression>
+					</textField>
+				</frame>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="7"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="270" y="0" width="378" height="62" uuid="47e95310-e745-4b50-9d99-cbb9440271f7"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Resala Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="303" y="62" width="196" height="22" uuid="19c98d06-c6a5-49b9-8f6d-a79f72b661df"/>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[By Mohamed Ramadan]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="1deffbfc-2dd5-4c3a-92ea-758ef3ac9024"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="1" y="0" width="238" height="15" forecolor="#736343" uuid="59cc0776-3fd1-4985-8094-d7dc876a6340"/>
+				<text><![CDATA[FAMILY_AREA_CODE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="198" y="0" width="238" height="15" forecolor="#736343" uuid="8f61b14e-17bf-4407-b741-b2a2797350c9"/>
+				<text><![CDATA[FAMILY_RATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="582" y="0" width="238" height="15" forecolor="#736343" uuid="4a58e179-9701-4202-947d-8fa28aad9329"/>
+				<text><![CDATA[FAMILY_NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="690" y="1" width="238" height="15" forecolor="#736343" uuid="039ddd5f-ba13-4b70-9814-6cb7fb39a3a3"/>
+				<text><![CDATA[FAMILY_HUSBAND_NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="853" y="1" width="238" height="15" forecolor="#736343" uuid="8dcce8cf-71d4-4adc-baac-560d313030eb"/>
+				<text><![CDATA[FAMILY_PHONE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="964" y="0" width="238" height="15" forecolor="#736343" uuid="7482923c-72bf-4a27-a183-8ce8a59fbbe5"/>
+				<text><![CDATA[FAMILY_MOBILE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="1066" y="0" width="238" height="15" forecolor="#736343" uuid="a2a0d05e-ff96-4713-8cba-9717cae01268"/>
+				<text><![CDATA[FAMILY_RESEARCH_DATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="1247" y="0" width="238" height="15" forecolor="#736343" uuid="7d649d8a-35be-4d9d-ae86-7131ffd2727a"/>
+				<text><![CDATA[FAMILY_RESEARCHER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="1394" y="0" width="238" height="15" forecolor="#736343" uuid="023ff771-59cd-46ec-8eec-090ac4521886"/>
+				<text><![CDATA[FAMILY_CASE_DESCRIPTION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="2085" y="0" width="238" height="15" forecolor="#736343" uuid="ad285bb0-e6d3-4532-a13b-3add77779f97"/>
+				<text><![CDATA[ACCOMMODATION_FLOORS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="2271" y="0" width="238" height="15" forecolor="#736343" uuid="637302bc-5035-42da-9f18-b26b3a15ab74"/>
+				<text><![CDATA[ACCOMMODATION_ROOMS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="2449" y="0" width="238" height="15" forecolor="#736343" uuid="40a9bdfd-95e9-4114-bd1a-e320660fc9b7"/>
+				<text><![CDATA[ACCOMMODATION_ROOF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="2613" y="0" width="205" height="15" forecolor="#736343" uuid="f93bd19e-d131-4d4d-85be-a4ca88d00064"/>
+				<text><![CDATA[ACCOMMODATION_BATHROOM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="2812" y="0" width="169" height="15" forecolor="#736343" uuid="dd7fc649-05ae-416c-adb7-512d68d7fe72"/>
+				<text><![CDATA[ACCOMMODATION_BUILD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="2973" y="0" width="163" height="15" forecolor="#736343" uuid="1babce1f-ce7f-4c74-98f5-578537c393d5"/>
+				<text><![CDATA[ACCOMMODATION_RATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="3137" y="0" width="185" height="15" forecolor="#736343" uuid="50b99808-2b54-4911-9d9a-aab1bbb7b03e"/>
+				<text><![CDATA[ACCOMMODATION_WATER_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="3325" y="0" width="226" height="15" forecolor="#736343" uuid="9e71d1b7-0796-4e49-b876-8ae083d5ba37"/>
+				<text><![CDATA[ACCOMMODATION_ELECTRICITY_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="3550" y="0" width="178" height="15" forecolor="#736343" uuid="2c34f1fd-b42e-4c3b-b26c-74615f85dda2"/>
+				<text><![CDATA[ACCOMMODATION_OPINION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="3729" y="0" width="193" height="15" forecolor="#736343" uuid="7dbe23ff-485c-41ab-b013-9f7911e213ee"/>
+				<text><![CDATA[ACCOMMODATION_FAMILY_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="3923" y="0" width="173" height="15" forecolor="#736343" uuid="9dbe61e8-acc5-4fc8-a616-949488c66174"/>
+				<text><![CDATA[FAMILY_MEMBERS_NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="4092" y="0" width="151" height="15" forecolor="#736343" uuid="c84195b2-6b92-4ef4-b737-4c530ef38a4b"/>
+				<text><![CDATA[FAMILY_MEMBERS_AGE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="4242" y="0" width="188" height="15" forecolor="#736343" uuid="f02ed110-484e-4014-a358-119e8503e8f1"/>
+				<text><![CDATA[FAMILY_MEMBERS_MARRIED]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="4426" y="0" width="197" height="15" forecolor="#736343" uuid="f55615bf-2bb5-4d19-b180-56103cb16dd3"/>
+				<text><![CDATA[FAMILY_MEMBERS_EDUCATION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="4625" y="0" width="151" height="15" forecolor="#736343" uuid="1aa985f5-7b47-4dec-98b3-6712042c3879"/>
+				<text><![CDATA[FAMILY_MEMBERS_JOB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="4783" y="0" width="208" height="15" forecolor="#736343" uuid="e8112640-75c3-404d-b8f7-49eb3d238f68"/>
+				<text><![CDATA[FAMILY_MEMBERS_NATIONAL_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="1584" y="0" width="238" height="15" forecolor="#736343" uuid="81ddcca0-0dc7-4b4b-9401-bb3740175276"/>
+				<text><![CDATA[ACCOMMODATION_TYPE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="1752" y="0" width="238" height="15" forecolor="#736343" uuid="b2c646ea-681b-45f0-b797-b2c861622837"/>
+				<text><![CDATA[ACCOMMODATION_RENT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="1918" y="0" width="238" height="15" forecolor="#736343" uuid="4738b64d-bc5d-4d01-9fe0-18052bac83e2"/>
+				<text><![CDATA[ACCOMMODATION_AREA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="1" y="0" width="4999" height="15" uuid="f4f4319f-3852-404f-b947-256fc3a2092a"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="7" y="0" width="128" height="15" uuid="03e96e5a-0072-4913-837d-3e47592bbe21"/>
+					<textFieldExpression><![CDATA[$F{FAMILY_AREA_CODE}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="174" y="0" width="128" height="15" uuid="0324f303-09aa-4b63-9dbb-edb7337d8aab"/>
+					<textFieldExpression><![CDATA[$F{FAMILY_RATE}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="571" y="0" width="128" height="15" uuid="742456f1-de77-4bd9-9a4e-187f6aead95d"/>
+					<textFieldExpression><![CDATA[$F{FAMILY_NAME}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="708" y="0" width="128" height="15" uuid="be3d463b-7f04-41b3-bc14-d81b68b9a531"/>
+					<textFieldExpression><![CDATA[$F{FAMILY_HUSBAND_NAME}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="855" y="0" width="128" height="15" uuid="ffbfbfb3-9f89-4c17-a2b0-bab7a062648d"/>
+					<textFieldExpression><![CDATA[$F{FAMILY_PHONE}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="972" y="0" width="128" height="15" uuid="288de5b7-812b-4a9d-a0f8-18bbaecab5d6"/>
+					<textFieldExpression><![CDATA[$F{FAMILY_MOBILE}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="1089" y="0" width="128" height="15" uuid="8af2ff51-ec84-49ca-a1e3-bd28e12af450"/>
+					<textFieldExpression><![CDATA[$F{FAMILY_RESEARCH_DATE}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="1246" y="0" width="128" height="15" uuid="37bc8e84-fb25-4153-baac-24f0a9366b33"/>
+					<textFieldExpression><![CDATA[$F{FAMILY_RESEARCHER}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="1413" y="0" width="128" height="15" uuid="ea1f671a-4efb-4cd6-a8e8-8ce1dcaeb022"/>
+					<textFieldExpression><![CDATA[$F{FAMILY_CASE_DESCRIPTION}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="1600" y="0" width="128" height="15" uuid="e9eeabb4-1eac-4231-9b37-6e77730e5c30"/>
+					<textFieldExpression><![CDATA[$F{ACCOMMODATION_TYPE}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="1777" y="0" width="128" height="15" uuid="017b64e7-4dbb-4146-906e-0ffbab883c82"/>
+					<textFieldExpression><![CDATA[$F{ACCOMMODATION_RENT}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="1904" y="0" width="128" height="15" uuid="d168b2fb-c4e1-4b55-818b-6f2f53958cc8"/>
+					<textFieldExpression><![CDATA[$F{ACCOMMODATION_AREA}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="2108" y="0" width="128" height="15" uuid="11c86969-2eaf-4f12-9165-ae991d3e1987"/>
+					<textFieldExpression><![CDATA[$F{ACCOMMODATION_ROOMS}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="2492" y="0" width="128" height="15" uuid="7b87c6a5-9d17-4e99-8f62-b77dffbceb6a"/>
+					<textFieldExpression><![CDATA[$F{ACCOMMODATION_ROOF}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="2614" y="0" width="128" height="15" uuid="3c61acf3-0ed5-4dcf-9ca2-a9940a93042b"/>
+					<textFieldExpression><![CDATA[$F{ACCOMMODATION_BATHROOM}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="2811" y="0" width="128" height="15" uuid="d66579e6-585b-4e1b-ba21-de55fe9d322d"/>
+					<textFieldExpression><![CDATA[$F{ACCOMMODATION_BUILD}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="2958" y="0" width="128" height="15" uuid="b013fad4-74a7-4f5f-b97b-6c90565ad5bf"/>
+					<textFieldExpression><![CDATA[$F{ACCOMMODATION_RATE}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="3175" y="0" width="128" height="15" uuid="a7e9fb5e-a439-4076-82db-c9aa720ce8cf"/>
+					<textFieldExpression><![CDATA[$F{ACCOMMODATION_WATER_ID}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="3342" y="0" width="128" height="15" uuid="312c6b33-e209-487f-9fee-d82373f34ea7"/>
+					<textFieldExpression><![CDATA[$F{ACCOMMODATION_ELECTRICITY_ID}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="3599" y="0" width="128" height="15" uuid="49f0c31b-7783-44ea-8ea3-aabdafd7f9cf"/>
+					<textFieldExpression><![CDATA[$F{ACCOMMODATION_OPINION}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="3776" y="0" width="128" height="15" uuid="dd7e385e-dd82-462a-9a42-108ab3fe8bf6"/>
+					<textFieldExpression><![CDATA[$F{ACCOMMODATION_FAMILY_ID}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="3973" y="0" width="128" height="15" uuid="abbb57f0-0fb7-4637-843e-4581ab1ff961"/>
+					<textFieldExpression><![CDATA[$F{FAMILY_MEMBERS_NAME}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="4080" y="0" width="128" height="15" uuid="ef28aab5-232a-40d7-886d-dc5f9bdf7a73"/>
+					<textFieldExpression><![CDATA[$F{FAMILY_MEMBERS_AGE}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="4297" y="0" width="128" height="15" uuid="6b709070-142d-41ac-8e50-2b17961b341c"/>
+					<textFieldExpression><![CDATA[$F{FAMILY_MEMBERS_MARRIED}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="4494" y="0" width="128" height="15" uuid="8e640e6d-13c6-4efe-80b5-18618ad4f73b"/>
+					<textFieldExpression><![CDATA[$F{FAMILY_MEMBERS_EDUCATION}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="4647" y="0" width="128" height="15" uuid="551d4a5f-0d9a-45dc-b372-f2d80787d1d9"/>
+					<textFieldExpression><![CDATA[$F{FAMILY_MEMBERS_JOB}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="4849" y="0" width="128" height="15" uuid="90aea9d9-c0e3-4389-ab33-fa98e214268d"/>
+					<textFieldExpression><![CDATA[$F{FAMILY_MEMBERS_NATIONAL_ID}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="2260" y="0" width="128" height="15" uuid="60d2846a-82f6-4402-8da0-86d6a1c09752"/>
+					<textFieldExpression><![CDATA[$F{ACCOMMODATION_FLOORS}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="8" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="0bd3b7ed-336d-4320-861b-678f67393987"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="f609d831-ea80-46f1-9bdd-3e4ce2f296d6"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="f6741d9e-c270-4a00-af7c-ff50bf632ac0"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="03e3e7e0-e4de-462d-a49f-0b591010c789"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="6ebc548d-f868-44ab-ae43-3e97ab11e1ae"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<JFXTabPane fx:id="inputTab" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #EDEDED;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test1.inputController">
+   <tabs>
+      <Tab text="Family">
+        <content>
+          <AnchorPane  minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="next1" buttonType="RAISED" layoutX="650.0" layoutY="500.0" onAction="#moveNextTab" prefHeight="25.0" prefWidth="100.0" ripplerFill="#8a8686" style="-fx-background-color: #009688;" text="Next" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></JFXButton>
+                  <JFXTextField fx:id="idText" labelFloat="true" layoutX="70.0" layoutY="90.0" promptText="Family ID" />
+                  <JFXTextField fx:id="area_codeText" labelFloat="true" layoutX="320.0" layoutY="90.0" promptText="Area Code" />
+                  <JFXTextField fx:id="nameText" labelFloat="true" layoutX="570.0" layoutY="90.0" promptText="Family Name" />
+                  <JFXTextField fx:id="husband_nameText" labelFloat="true" layoutX="70.0" layoutY="210.0" promptText="Husband Name" />
+                  <JFXTextField fx:id="phoneText" labelFloat="true" layoutX="320.0" layoutY="210.0" promptText="Phone Number" />
+                  <JFXTextField fx:id="mobileText" labelFloat="true" layoutX="570.0" layoutY="210.0" promptText="Mobile Numer" />
+                  <JFXTextField fx:id="researcherText" labelFloat="true" layoutX="70.0" layoutY="330.0" promptText="Researcher" />
+                  <JFXTextField fx:id="descriptionText" labelFloat="true" layoutX="320.0" layoutY="330.0" promptText="Case Description" />
+                  <JFXDatePicker fx:id="research_dateDate" layoutX="570.0" layoutY="330.0" prefHeight="31.0" prefWidth="169.0" promptText="Research Date" />
+                  <JFXSlider fx:id="rateSlider" blockIncrement="1.0" indicatorPosition="RIGHT" layoutX="70.0" layoutY="493.0" majorTickUnit="10.0" max="10.0" minorTickCount="10" prefHeight="18.0" prefWidth="357.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                  <Label layoutX="70.0" layoutY="442.0" text="Rate" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Members">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="next2" buttonType="RAISED" layoutX="650.0" layoutY="500.0" onAction="#moveNextTab" prefHeight="25.0" prefWidth="100.0" ripplerFill="#8a8686" style="-fx-background-color: #009688;" text="Next" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></JFXButton>
+                  <VBox layoutY="16.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="800.0" style="-fx-spacing: 15;">
+                           <children>
+                              <JFXTextField fx:id="member1name" prefHeight="40.0" prefWidth="120.0" promptText="Name" />
+                              <JFXToggleButton fx:id="membermarried1" prefHeight="40.0" prefWidth="126.0" text="Married" />
+                              <JFXTextField fx:id="memberage1" editable="true" prefHeight="40.0" prefWidth="119.0" promptText="Age"/>
+                              <JFXTextField fx:id="membereducation1" prefHeight="40.0" prefWidth="117.0" promptText="Education" />
+                              <JFXTextField fx:id="memberid1" prefHeight="40.0" prefWidth="117.0" promptText="National ID" />
+                              <JFXTextField fx:id="memberjob1" prefHeight="40.0" prefWidth="84.0" promptText="Job" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="800.0" style="-fx-spacing: 15;">
+                           <children>
+                              <JFXTextField fx:id="member2name" prefHeight="40.0" prefWidth="120.0" promptText="Name" />
+                              <JFXToggleButton fx:id="membermarried2" prefHeight="40.0" prefWidth="126.0" text="Married" />
+                              <JFXTextField fx:id="memberage2" prefHeight="40.0" prefWidth="119.0" promptText="Age"/>
+                              <JFXTextField fx:id="membereducation2" prefHeight="40.0" prefWidth="117.0" promptText="Education" />
+                              <JFXTextField fx:id="memberid2" prefHeight="40.0" prefWidth="117.0" promptText="National ID" />
+                              <JFXTextField fx:id="memberjob2" prefHeight="40.0" prefWidth="84.0" promptText="Job" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="800.0" style="-fx-spacing: 15;">
+                           <children>
+                              <JFXTextField fx:id="member3name" prefHeight="40.0" prefWidth="120.0" promptText="Name" />
+                              <JFXToggleButton fx:id="membermarried3" prefHeight="40.0" prefWidth="126.0" text="Married" />
+                              <JFXTextField fx:id="memberage3" prefHeight="40.0" prefWidth="119.0" promptText="Age"/>
+                              <JFXTextField fx:id="membereducation3" prefHeight="40.0" prefWidth="117.0" promptText="Education" />
+                              <JFXTextField fx:id="memberid3" prefHeight="40.0" prefWidth="117.0" promptText="National ID" />
+                              <JFXTextField fx:id="memberjob3" prefHeight="40.0" prefWidth="84.0" promptText="Job" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="800.0" style="-fx-spacing: 15;">
+                           <children>
+                              <JFXTextField fx:id="member4name" prefHeight="40.0" prefWidth="120.0" promptText="Name" />
+                              <JFXToggleButton fx:id="membermarried4" prefHeight="40.0" prefWidth="126.0" text="Married" />
+                              <JFXTextField fx:id="memberage4" prefHeight="40.0" prefWidth="119.0" promptText="Age"/>
+                              <JFXTextField fx:id="membereducation4" prefHeight="40.0" prefWidth="117.0" promptText="Education" />
+                              <JFXTextField fx:id="memberid4" prefHeight="40.0" prefWidth="117.0" promptText="National ID" />
+                              <JFXTextField fx:id="memberjob4" prefHeight="40.0" prefWidth="84.0" promptText="Job" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="800.0" style="-fx-spacing: 15;">
+                           <children>
+                              <JFXTextField fx:id="member5name" prefHeight="40.0" prefWidth="120.0" promptText="Name" />
+                              <JFXToggleButton fx:id="membermarried5" prefHeight="40.0" prefWidth="126.0" text="Married" />
+                              <JFXTextField fx:id="memberage5" prefHeight="40.0" prefWidth="119.0" promptText="Age"/>
+                              <JFXTextField fx:id="membereducation5" prefHeight="40.0" prefWidth="117.0" promptText="Education" />
+                              <JFXTextField fx:id="memberid5" prefHeight="40.0" prefWidth="117.0" promptText="National ID" />
+                              <JFXTextField fx:id="memberjob5" prefHeight="40.0" prefWidth="84.0" promptText="Job" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="800.0" style="-fx-spacing: 15;">
+                           <children>
+                              <JFXTextField fx:id="member6name" prefHeight="40.0" prefWidth="120.0" promptText="Name" />
+                              <JFXToggleButton fx:id="membermarried6" prefHeight="40.0" prefWidth="126.0" text="Married" />
+                              <JFXTextField fx:id="memberage6" prefHeight="40.0" prefWidth="119.0" promptText="Age"/>
+                              <JFXTextField fx:id="membereducation6" prefHeight="40.0" prefWidth="117.0" promptText="Education" />
+                              <JFXTextField fx:id="memberid6" prefHeight="40.0" prefWidth="117.0" promptText="National ID" />
+                              <JFXTextField fx:id="memberjob6" prefHeight="40.0" prefWidth="84.0" promptText="Job" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="800.0" style="-fx-spacing: 15;">
+                           <children>
+                              <JFXTextField fx:id="member7name" prefHeight="40.0" prefWidth="120.0" promptText="Name" />
+                              <JFXToggleButton fx:id="membermarried7" prefHeight="40.0" prefWidth="126.0" text="Married" />
+                              <JFXTextField fx:id="memberage7" prefHeight="40.0" prefWidth="119.0" promptText="Age"/>
+                              <JFXTextField fx:id="membereducation7" prefHeight="40.0" prefWidth="117.0" promptText="Education" />
+                              <JFXTextField fx:id="memberid7" prefHeight="40.0" prefWidth="117.0" promptText="National ID" />
+                              <JFXTextField fx:id="memberjob7" prefHeight="40.0" prefWidth="84.0" promptText="Job" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="370.0" prefHeight="60.0" prefWidth="800.0" style="-fx-spacing: 15;">
+                           <children>
+                              <JFXTextField fx:id="member8name" prefHeight="40.0" prefWidth="120.0" promptText="Name" />
+                              <JFXToggleButton fx:id="membermarried8" prefHeight="40.0" prefWidth="126.0" text="Married" />
+                              <JFXTextField fx:id="memberage8" prefHeight="40.0" prefWidth="119.0" promptText="Age"/>
+                              <JFXTextField fx:id="membereducation8" prefHeight="40.0" prefWidth="117.0" promptText="Education" />
+                              <JFXTextField fx:id="memberid8" prefHeight="40.0" prefWidth="117.0" promptText="National ID" />
+                              <JFXTextField fx:id="memberjob8" prefHeight="40.0" prefWidth="84.0" promptText="Job" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Accommodation">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="next3" buttonType="RAISED" layoutX="650.0" layoutY="500.0" onAction="#moveNextTab" prefHeight="25.0" prefWidth="100.0" ripplerFill="#8a8686" style="-fx-background-color: #009688;" text="Next" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></JFXButton>
+                  <JFXRadioButton layoutX="200.0" layoutY="30.0" text="Flat" fx:id="typeflat"/>
+                  <JFXRadioButton layoutX="350.0" layoutY="30.0" text="Village" fx:id="typevillage"/>
+                  <JFXRadioButton layoutX="500.0" layoutY="30.0" text="City House" fx:id="typecity"/>
+                  <JFXRadioButton layoutX="650.0" layoutY="30.0" text="Nest" fx:id="typenest"/>
+                  <JFXRadioButton layoutX="200.0" layoutY="80.0" text="Rent" fx:id="rentrent"/>
+                  <JFXRadioButton layoutX="350.0" layoutY="80.0" text="Private" fx:id="rentprivate"/>
+                  <JFXRadioButton layoutX="500.0" layoutY="80.0" text="State Property" fx:id="rentstate"/>
+                  <JFXRadioButton layoutX="650.0" layoutY="80.0" text="Shared" fx:id="rentshared"/>
+                  <JFXRadioButton layoutX="200.0" layoutY="130.0" text="Suburbs" fx:id="areasuburbs"/>
+                  <JFXRadioButton layoutX="350.0" layoutY="130.0" text="Village" fx:id="areavillage"/>
+                  <JFXRadioButton layoutX="500.0" layoutY="130.0" text="City" fx:id="areacity"/>
+                  <JFXRadioButton layoutX="650.0" layoutY="130.0" text="Badu" fx:id="areabadu"/>
+                  <JFXTextField layoutX="200.0" layoutY="180.0" prefHeight="31.0" prefWidth="126.0" promptText="Rooms" fx:id="rooms"/>
+                  <JFXTextField layoutX="650.0" layoutY="180.0" prefHeight="31.0" prefWidth="126.0" promptText="Floors" fx:id="floors"/>
+                  <JFXRadioButton layoutX="200.0" layoutY="230.0" text="Paintings" fx:id="buildingpainting"/>
+                  <JFXRadioButton layoutX="350.0" layoutY="230.0" text="Concrete Walls" fx:id="buildingconcrete"/>
+                  <JFXRadioButton layoutX="500.0" layoutY="230.0" text="Red Brick" fx:id="buildingbrick"/>
+                  <JFXRadioButton layoutX="650.0" layoutY="230.0" text="Mudbrick" fx:id="buildingmud"/>
+                  <JFXTextField layoutX="570.0" layoutY="330.0" prefHeight="31.0" prefWidth="189.0" promptText="Water ID" />
+                  <JFXTextField layoutX="570.0" layoutY="280.0" prefHeight="31.0" prefWidth="186.0" promptText="Electricity ID" />
+                  <Label layoutX="50.0" layoutY="30.0" text="Type" />
+                  <Label layoutX="50.0" layoutY="80.0" text="Rent" />
+                  <Label layoutX="50.0" layoutY="130.0" text="Area" />
+                  <Label layoutX="50.0" layoutY="180.0" text="Rooms" />
+                  <Label layoutX="500.0" layoutY="180.0" text="Floors" />
+                  <Label layoutX="50.0" layoutY="230.0" text="Buildings" />
+                  <JFXRadioButton layoutX="200.0" layoutY="280.0" text="Private" />
+                  <JFXRadioButton layoutX="350.0" layoutY="280.0" text="Shared" />
+                  <Label layoutX="50.0" layoutY="280.0" text="Bathroom" />
+                  <JFXRadioButton layoutX="200.0" layoutY="330.0" text="Concrete" fx:id="roofconcrete"/>
+                  <JFXRadioButton layoutX="350.0" layoutY="330.0" text="Wood" fx:id="roofwood"/>
+                  <Label layoutX="50.0" layoutY="330.0" text="Roof" />
+                  <JFXSlider blockIncrement="1.0" indicatorPosition="RIGHT" layoutX="350.0" layoutY="380.0" majorTickUnit="1.0" max="4.0" min="1.0" minorTickCount="0" prefHeight="28.0" prefWidth="415.0" showTickMarks="true" snapToTicks="true" fx:id="accrate"/>
+                  <Label layoutX="50.0" layoutY="380.0" text="Accomodation Rate" />
+                  <JFXTextArea layoutX="50.0" layoutY="430.0" prefHeight="98.0" prefWidth="508.0" promptText="Researcher opinion of the house" fx:id="opinion"/>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Income">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="next4" buttonType="RAISED" layoutX="650.0" layoutY="500.0" onAction="#moveNextTab" prefHeight="25.0" prefWidth="100.0" ripplerFill="#8a8686" style="-fx-background-color: #009688;" text="Next" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></JFXButton>
+                  <VBox layoutX="100.0" layoutY="50.0" style="-fx-spacing: 20;">
+                     <children>
+                        <HBox style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField fx:id="incomevalue1" promptText="Value" />
+                              <JFXTextField fx:id="incomedetail1" promptText="Details" />
+                           </children>
+                        </HBox>
+                        <HBox style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField fx:id="incomevalue11" promptText="Value" />
+                              <JFXTextField fx:id="incomedetail11" promptText="Details" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="61.0" style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField fx:id="incomevalue111" promptText="Value" />
+                              <JFXTextField fx:id="incomedetail111" promptText="Details" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="112.0" style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField fx:id="incomevalue1111" promptText="Value" />
+                              <JFXTextField fx:id="incomedetail1111" promptText="Details" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="163.0" style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField fx:id="incomevalue11111" promptText="Value" />
+                              <JFXTextField fx:id="incomedetail11111" promptText="Details" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="214.0" style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField fx:id="incomevalue111111" promptText="Value" />
+                              <JFXTextField fx:id="incomedetail111111" promptText="Details" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="265.0" style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField fx:id="incomevalue1111111" promptText="Value" />
+                              <JFXTextField fx:id="incomedetail1111111" promptText="Details" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="316.0" style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField fx:id="incomevalue11111111" promptText="Value" />
+                              <JFXTextField fx:id="incomedetail11111111" promptText="Details" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Outcome">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="next5" buttonType="RAISED" layoutX="650.0" layoutY="500.0" onAction="#moveNextTab" prefHeight="25.0" prefWidth="100.0" ripplerFill="#8a8686" style="-fx-background-color: #009688;" text="Next" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></JFXButton>
+                  <VBox layoutX="100.0" layoutY="50.0" style="-fx-spacing: 20;">
+                     <children>
+                        <HBox style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField fx:id="outcomevalue1" promptText="Value" />
+                              <JFXTextField fx:id="outcomedetail1" promptText="Details" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="10.0" style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField fx:id="outcomevalue11" promptText="Value" />
+                              <JFXTextField fx:id="outcomedetail11" promptText="Details" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="61.0" style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField fx:id="outcomevalue111" promptText="Value" />
+                              <JFXTextField fx:id="outcomedetail111" promptText="Details" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="112.0" style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField fx:id="outcomevalue1111" promptText="Value" />
+                              <JFXTextField fx:id="outcomedetail1111" promptText="Details" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="163.0" style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField fx:id="outcomevalue11111" promptText="Value" />
+                              <JFXTextField fx:id="outcomedetail11111" promptText="Details" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="214.0" style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField fx:id="outcomevalue111111" promptText="Value" />
+                              <JFXTextField fx:id="outcomedetail111111" promptText="Details" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="265.0" style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField fx:id="outcomevalue1111111" promptText="Value" />
+                              <JFXTextField fx:id="outcomedetail1111111" promptText="Details" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="316.0" style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField fx:id="outcomevalue11111111" promptText="Value" />
+                              <JFXTextField fx:id="outcomedetail11111111" promptText="Details" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Needs">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="next6" buttonType="RAISED" layoutX="650.0" layoutY="500.0" onAction="#moveNextTab" prefHeight="25.0" prefWidth="100.0" ripplerFill="#8a8686" style="-fx-background-color: #009688;" text="Next" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></JFXButton>
+                  <VBox layoutX="100.0" layoutY="50.0" style="-fx-spacing: 10;">
+                     <children>
+                        <HBox style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField promptText="Need" />
+                              <JFXToggleButton text="Availability" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="10.0" style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField promptText="Need" />
+                              <JFXToggleButton text="Availability" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="70.0" style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField promptText="Need" />
+                              <JFXToggleButton text="Availability" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="130.0" style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField promptText="Need" />
+                              <JFXToggleButton text="Availability" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="190.0" style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField promptText="Need" />
+                              <JFXToggleButton text="Availability" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="250.0" style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField promptText="Need" />
+                              <JFXToggleButton text="Availability" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Support">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="next7" buttonType="RAISED" layoutX="650.0" layoutY="500.0" onAction="#moveNextTab" prefHeight="25.0" prefWidth="100.0" ripplerFill="#8a8686" style="-fx-background-color: #009688;" text="Next" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></JFXButton>
+                  <VBox layoutX="25.0" layoutY="44.0" style="-fx-spacing: 20;">
+                     <children>
+                        <HBox style="-fx-spacing: 25;">
+                           <children>
+                              <JFXTextField promptText="Support Source" />
+                              <JFXTextField promptText="Value" />
+                              <JFXTextField promptText="Regularity" />
+                              <JFXTextField promptText="Type" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="10.0" style="-fx-spacing: 25;">
+                           <children>
+                              <JFXTextField promptText="Support Source" />
+                              <JFXTextField promptText="Value" />
+                              <JFXTextField promptText="Regularity" />
+                              <JFXTextField promptText="Type" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="41.0" style="-fx-spacing: 25;">
+                           <children>
+                              <JFXTextField promptText="Support Source" />
+                              <JFXTextField promptText="Value" />
+                              <JFXTextField promptText="Regularity" />
+                              <JFXTextField promptText="Type" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="72.0" style="-fx-spacing: 25;">
+                           <children>
+                              <JFXTextField promptText="Support Source" />
+                              <JFXTextField promptText="Value" />
+                              <JFXTextField promptText="Regularity" />
+                              <JFXTextField promptText="Type" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="103.0" style="-fx-spacing: 25;">
+                           <children>
+                              <JFXTextField promptText="Support Source" />
+                              <JFXTextField promptText="Value" />
+                              <JFXTextField promptText="Regularity" />
+                              <JFXTextField promptText="Type" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="134.0" style="-fx-spacing: 25;">
+                           <children>
+                              <JFXTextField promptText="Support Source" />
+                              <JFXTextField promptText="Value" />
+                              <JFXTextField promptText="Regularity" />
+                              <JFXTextField promptText="Type" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="165.0" style="-fx-spacing: 25;">
+                           <children>
+                              <JFXTextField promptText="Support Source" />
+                              <JFXTextField promptText="Value" />
+                              <JFXTextField promptText="Regularity" />
+                              <JFXTextField promptText="Type" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="10.0" style="-fx-spacing: 25;">
+                           <children>
+                              <JFXTextField promptText="Support Source" />
+                              <JFXTextField promptText="Value" />
+                              <JFXTextField promptText="Regularity" />
+                              <JFXTextField promptText="Type" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="367.0" style="-fx-spacing: 25;">
+                           <children>
+                              <JFXTextField promptText="Support Source" />
+                              <JFXTextField promptText="Value" />
+                              <JFXTextField promptText="Regularity" />
+                              <JFXTextField promptText="Type" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Appliance">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="store" buttonType="RAISED" layoutX="650.0" layoutY="500.0" onAction="#storeDatabase" prefHeight="25.0" prefWidth="100.0" ripplerFill="#8a8686" style="-fx-background-color: #4CAF50;" text="Store" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></JFXButton>
+                  <VBox layoutX="100.0" layoutY="50.0" style="-fx-spacing: 20;">
+                     <children>
+                        <HBox style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField promptText="Type" />
+                              <JFXTextField promptText="Status" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="10.0" style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField promptText="Type" />
+                              <JFXTextField promptText="Status" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="41.0" style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField promptText="Type" />
+                              <JFXTextField promptText="Status" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="72.0" style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField promptText="Type" />
+                              <JFXTextField promptText="Status" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="103.0" style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField promptText="Type" />
+                              <JFXTextField promptText="Status" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="134.0" style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField promptText="Type" />
+                              <JFXTextField promptText="Status" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="165.0" style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField promptText="Type" />
+                              <JFXTextField promptText="Status" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="10.0" style="-fx-spacing: 200;">
+                           <children>
+                              <JFXTextField promptText="Type" />
+                              <JFXTextField promptText="Status" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+   </tabs>
+</JFXTabPane>
