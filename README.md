@@ -14,4 +14,4 @@
 
 ### Also this is a diagram of the database
 
-![image](Screenshots/diagram.PNG)
+![image](Screenshots/diagram.jpg)
